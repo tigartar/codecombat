@@ -1,0 +1,24 @@
+while(true) {
+    if (hero.time < 10) {
+    var enemy = hero.findNearestEnemy();
+    if (enemy) {
+            if (hero.health < hero.maxHealth / 4 ) {
+                hero.moveXY(21, 52);
+            }
+            else if (hero.isReady("cleave")) {
+                hero.cleave(enemy);              
+            }
+            else {
+                hero.attack(enemy);
+            } 
+            }
+    }
+    else if (hero.time < 35) {
+        var item = hero.findNearestItem();
+        if (item) {
+        var moveToX = item.pos.x;
+        var moveToY = item.pos.y;
+        hero.moveXY(moveToX, moveToY);
+        }
+    }
+}

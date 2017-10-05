@@ -1,0 +1,13 @@
+hero.moveXY(30, 13);
+var las = hero.findNearestFriend().getSecret();
+var secretr= las;
+var number= las + 7;
+var erz = las + 7;
+hero.moveXY(17, 26);
+hero.say(erz);
+number = (7 + las) / 4;
+hero.moveXY(30, 39);
+hero.say(number);
+number = number * secretr;
+hero.moveXY(43, 26);
+hero.say(number);

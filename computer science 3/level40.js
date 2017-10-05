@@ -1,0 +1,16 @@
+hero.moveXY(24, 16);
+var secretA = hero.findNearestFriend().getSecretA();
+var secretB = hero.findNearestFriend().getSecretB();
+var secretC = hero.findNearestFriend().getSecretC();
+var tam = (secretA && secretB) || secretC;
+hero.moveXY(19, 26);
+hero.say(tam);
+var Zsofi = (secretA || secretB) && secretC;
+hero.moveXY(26, 36);
+hero.say(Zsofi);
+var Istvan = (secretA || secretC) && (secretB || secretC);
+hero.moveXY(37, 34);
+hero.say(Istvan);
+var Csilla = (secretA && secretB) || (secretB && secretC);
+hero.moveXY(40, 22);
+hero.say(Csilla);
